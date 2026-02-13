@@ -275,11 +275,14 @@ td
 #resultadoRegra
 {
     text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 #calcularRegra
 {
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #botaoImportar
