@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Controle Financeiro</title>
+     <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e88e5">
+</head>
+    <body>
+        <h1 id="tituloDaPagina">Meu Controle Financeiro</h1>
+
+    <div id="backupContainer">
+    <button id="exportarExcel">Exportar Excel</button>
+
+    <input type="file" id="importarExcel" accept=".xlsx, .xls" style="display:none">
+    <button id="botaoImportar">Importar Excel</button>
+    </div>  
+
+
+    <div id="tabelasContainer">
+        <div class="colunaEntradas">
+            <button id="botaoAdicionarEntrada">Adicionar Entradas</button>
+            <div class="tabelaScroll">
+                <table id="tabelaEntradas">
+
+                    <thead id="theadEntrada"> 
+                        <tr>
+                            <th>Entrada</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+
+                    </tbody>
+
+                </table>
+            </div>    
+            <p id="totalEntradas">
+                Total de Entradas: 0,00
+            </p>
+        </div>
+
+        <div class="colunaGastos">
+            <button id="botaoAdicionarGastos">Adicionar Gastos</button>
+            <div class="tabelaScroll">
+                <table id="tabelaGastos">
+                    <thead id="theadGastos">
+                        <tr>
+                            <th>Gasto</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th>Excluir</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>    
+             <p id="totalGastos">
+                Total de Gastos: 0,00
+            </p>
+
+        </div>
+
+
+
+    </div>  
+
+
+
+    <h2 id="meusUltimosTresMeses">Meus Ultimos Três Meses</h2>
+    <div id="graficoContainer">
+        <canvas id="graficoEntradasGastos"></canvas>
+
+    </div>
+
+
+    <h2 id="regra503020">Regra 50 | 30 | 20 </h2>
+
+<div id="regraContainer">
+
+        <label>
+            Digite seu salário:
+            <input type="number" id="salario" step="0.01" placeholder="Ex: 3000">
+        </label>
+
+        <button id="calcularRegra">Calcular</button>
+
+        <div id="resultadoRegra">
+            <p>50% do seu salário é: R$ 0,00  (Necessidades Essenciais)</p>
+            <p>30% do seu salário é: R$ 0,00  (Lazer e Hobbies)</p>
+            <p>20% do seu salário é: R$ 0,00  (Poupar e Investir)</p>
+        </div>
+
+</div>
+        <div id="modal" class="modal">
+            <div class="modal-conteudo">
+                <h2>Novo Item</h2>
+                <form id="formEntrada">
+                    <label>
+                        Nome da Entrada ou Gasto:
+                        <input type="text" id="entrada" required>
+                    </label>
+
+                    <label>  
+                        Valor:
+                        <input type="number" id="valor" step="0.01" required>
+                    </label>
+
+                    <label>
+                        Data:
+                        <input type="date" id="data" required>=
+                    </label>
+
+                    <div class="botoes">
+                        <button type="submit">Adicionar</button>
+                        <button type="button" id="fecharModal">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>     
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>  
+    </body>
+
+</html>
