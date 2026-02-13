@@ -269,7 +269,7 @@ td
     background-color: aliceblue;
     text-align: center;
     border-radius: 20px;
-    margin: 20px;    
+    margin-top: 20px;   
     
 }
 
@@ -311,7 +311,6 @@ td
 
 #digiteSalario
 {
-    margin-top: 50px;
-    text-align: center;
+   margin-top: 150px;
 
 }
