@@ -269,6 +269,17 @@ td
     background-color: aliceblue;
     text-align: center;
     border-radius: 20px;
+    
+}
+
+#resultadoRegra
+{
+    text-align: center;
+}
+
+#calcularRegra
+{
+    margin-top: 5px;
 }
 
 #botaoImportar
